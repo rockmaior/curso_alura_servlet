@@ -1,9 +1,12 @@
 package br.com.caelum.gerenciador.servlet;
 
+import java.util.Date;
+
 public class Empresa {
 	
 	private int id;
 	private String nome;
+	private Date dataAbertura = new Date();
 	/**
 	 * @return the id
 	 */
@@ -27,6 +30,22 @@ public class Empresa {
 	 */
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	/**
+	 * 
+	 * @return the data de abertura
+	 */
+	public Date getDataAbertura() {
+		return dataAbertura;
+	}
+	
+	/**
+	 * 
+	 * @param dataAbertura
+	 */
+	public void setDataAbertura(Date dataAbertura) {
+		this.dataAbertura = dataAbertura;
 	}
 	   
 }
