@@ -13,6 +13,8 @@
 	<form action="${linkServletNovaEmpresa}" method="POST">
 		Nome: <input type="text" name="nome" value="${empresa.nome }">
 		<p>	Data da abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura }" pattern="dd/MM/yyyy" />"/> </p>
+				<p>	Id: <input type="hidden" name="id" value="${empresa.id }" /> </p>
+		
 		<input type="submit">
 	</form>
 </body>
