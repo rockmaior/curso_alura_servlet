@@ -1,24 +1,19 @@
-package br.com.caelum.gerenciador.servlet;
+package br.com.alura.gerenciador.acao;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ListaEmpresasServlet
- */
-@WebServlet("/listaEmpresas")
-public class ListaEmpresasServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+import br.com.alura.gerenciador.modelo.Banco;
+import br.com.alura.gerenciador.modelo.Empresa;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+public class ListaEmpresas {
+
+	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Banco banco = new Banco();
 		List<Empresa> lista = banco.getEmpresas();
 		for (Empresa empresa : lista) {
