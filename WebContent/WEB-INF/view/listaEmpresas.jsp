@@ -8,12 +8,13 @@
 
 <html>
 <body>
+usuario logado: ${usuarioLogado.login }, <c:import url="logout-parcial.jsp"></c:import>
+
 <c:if test="${not empty empresa }">
 		Empresa ${empresa } cadastrada com sucesso!!
 	</c:if>
 <br />
 Lista de Empresas: <br />
-	
 	<ul>
 		<c:forEach items="${empresas }" var="empresa">
 			<li>

@@ -9,12 +9,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:import url="logout-parcial.jsp"></c:import>
-
 	<form action="${linkEntradaServlet}" method="POST">
-		<p>Nome: <input type="text" name="nome"></p>
-		<p>	Data da abertura: <input type="text" name="data"> </p>
-		<input type="hidden" name="acao" value="NovaEmpresa">
+		<p>Login: <input type="text" name="login"></p>
+		<p>Senha: <input type="password" name="senha"> </p>
+		<input type="hidden" name="acao" value="Login">
 		<input type="submit">
 	</form>
 </body>
